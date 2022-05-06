@@ -1,0 +1,9 @@
+.card{
+  color: var(--Blnaco-letra);
+  background-color: transparent;
+  border: none;
+}
+.card-img-top{
+  width: 40px;
+  border-radius: 100%;
+}

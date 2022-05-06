@@ -1,0 +1,12 @@
+.icons{
+  font-size: 85px;
+  color: var(--Azul-oscuro);
+}
+.link{
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--Azul-oscuro);
+}
+.link:hover{
+  color: var(--Azul-claro);
+}

@@ -1,0 +1,49 @@
+.hero-info-txt-container{
+  width: 24%;
+  margin: 50px 3px;
+  background-color: var(--Azul-claro);
+  padding: 45px 0;
+  border-radius: 15px;
+  color: var(--Blanco-letra);
+  box-shadow: 1px 1px 1px 1px var(--Azul-oscuro);
+}
+.hero-info-txt{
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0;
+}
+.hero-info-subtxt{
+  font-size: 25px;
+  padding: 0 35px;
+}
+
+@media (min-width: 577px) and (max-width:992px){
+  .hero-info-txt-container{
+    width: 48%;
+    margin: 25px 5px 0 5px;
+    padding: 45px 0;
+    border-radius: 15px;
+  }
+  .hero-info-txt{
+    font-size: 30px;
+  }
+  .hero-info-subtxt{
+    font-size: 25px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 576px){
+  .hero-info-txt-container{
+    width: 45%;
+    height: 100px;
+    margin: 5px;
+    padding: 15px 0;
+  } 
+  .hero-info-txt{
+    font-size: 18px;
+  }
+  .hero-info-subtxt{
+    font-size: 12px;
+    padding: 0 15px;
+  }
+}

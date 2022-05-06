@@ -1,0 +1,17 @@
+.moneda-img{
+  width: 30px;
+  border-radius: 100%;
+}
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+.btn-fav{
+  border: none;
+  background-color: transparent;
+}
+.icon-fav{
+  color: red;
+}

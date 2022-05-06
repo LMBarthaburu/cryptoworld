@@ -1,0 +1,13 @@
+.descarga-img{
+  width:40%;
+}
+@media (min-width: 577px) and (max-width:992px){
+  .descarga-img{
+    width:80%;
+  }
+}
+@media (max-width: 576px){
+  .descarga-img{
+    width:60%;
+  }
+}

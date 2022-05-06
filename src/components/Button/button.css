@@ -1,0 +1,17 @@
+.navbar-btn{
+  border: none;
+  background-color: var(--Azul-oscuro);
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+}
+.navbar-btn:hover{
+  background-color: var(--Azul-claro);
+}
+.btn-edit{
+  color: var(--Blanco-letra);
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}

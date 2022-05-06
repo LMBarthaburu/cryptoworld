@@ -1,0 +1,7 @@
+.footer-icons{
+  color: var(--Negro-letra);
+  font-size: 25px;
+}
+.footer-icons:hover{
+  color: var(--Azul-oscuro);
+}

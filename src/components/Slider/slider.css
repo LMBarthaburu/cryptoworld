@@ -1,0 +1,13 @@
+.slider{
+  background-color: var(--Negro-letra);
+  color: var(--Blanco-letra);
+}
+.link-slider{
+  color: var(--Blanco-letra);
+  text-decoration: none;
+
+}
+.link-slider:hover{
+  color: var(--Azul-claro);
+  font-weight: bolder;
+}
