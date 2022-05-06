@@ -32,16 +32,18 @@ export default function CardPrice(props) {
 
   return (
     <>
-      <tr className='text-center'>
-        <td className='mb-2'>#{props.ranking}</td>
-        <td><img src={props.img} alt='monedas' className='moneda-img mb-2'/></td>
-        <td className='mb-2'>{props.nombre}</td>
-        <td className='mb-2 d-none d-md-block'>{props.simbolo}</td>
-        <td className='mb-2' >${props.precio}</td>
-        <td className='mb-2 ' id='cont'>{props.cambio}%</td>
-        <td className='mb-2 d-none d-md-block'>${props.capitalizacion}</td>
-        <td><button className='btn-fav'><AiOutlineHeart className='icon-fav'/></button></td>
-      </tr>
+      <tbody className='text-center'>
+        <tr>
+          <td className='mb-2'>#{props.ranking}</td>
+          <td><img src={props.img} alt='monedas' className='moneda-img mb-2'/></td>
+          <td className='mb-2'>{props.nombre}</td>
+          <td className='mb-2 d-none d-md-table-cell'>{props.simbolo}</td>
+          <td className='mb-2' >${props.precio}</td>
+          <td className='mb-2 ' id='cont'>{props.cambio}%</td>
+          <td className='mb-2 d-none d-md-table-cell'>${props.capitalizacion}</td>
+          <td><button className='btn-fav'><AiOutlineHeart className='icon-fav'/></button></td>
+        </tr>
+      </tbody>
   </>
   )
   // AiFillHeart
