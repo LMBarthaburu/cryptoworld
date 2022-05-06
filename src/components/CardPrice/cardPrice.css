@@ -1,4 +1,8 @@
+td{
+  border-bottom: 1px solid var(--Azul-oscuro);
+}
 .moneda-img{
+  padding-top: 10px;
   width: 30px;
   border-radius: 100%;
 }
@@ -13,5 +17,7 @@
   background-color: transparent;
 }
 .icon-fav{
+  margin-top: -5px;
   color: red;
+  font-size: 20px;
 }
