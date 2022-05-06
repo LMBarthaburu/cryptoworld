@@ -1,34 +1,37 @@
 import React from 'react'
-// import { useEffect } from 'react'
+import { useEffect } from 'react'
 import './cardPrice.css'
 import {AiOutlineHeart} from 'react-icons/ai'
 
 export default function CardPrice(props) {
-  // const precio =()=>{
-  //   const containerv = document.getElementById('cont')
-  //   const valor = props.cambio
-  //   if(valor<=0){
-  //     containerv.classList.add('red')
-  //     containerv.classList.remove('green')
-  //   }else{
-  //     containerv.classList.add('green')
-  //     containerv.classList.remove('red')
+  const precio =(id)=>{
+    const containerv = document.getElementById(props.id)
+    const valor = props.cambio
+    if(valor<=0){
+      containerv.classList.add('red')
+      containerv.classList.remove('green')
+    }else{
+      containerv.classList.add('green')
+      containerv.classList.remove('red')
 
-  //   }
-  // }
+    }
+  }
 
-  // useEffect(()=>{
-  //   precio()
-  // })
+  useEffect(()=>{
+    precio()
+  })
 
-  // const setFav=()=>{
-  //   let data = JSON.parse(localStorage.getItem('dataApi'))
-  //   let existingFavs= JSON.parse(localStorage.getItem('favoritos')) || []
-  //   let fav = data.find(info => info.id === id)
-  //   existingFavs.push(fav)
-  //   localStorage.setItem('favoritos', JSON.stringify(existingFavs))
-  // }
-
+    
+  const setFav=(id)=>{
+    let data = JSON.parse(localStorage.getItem('dataApi'))
+    console.log(data)
+    let existingFavs= JSON.parse(localStorage.getItem('favoritos')) || []
+    console.log(existingFavs)
+    const fav = data.find(info => info.id === id)
+    console.log(fav)
+    existingFavs.push(fav)
+    localStorage.setItem('favoritos', JSON.stringify(existingFavs))
+  }
 
   return (
     <>
@@ -39,9 +42,9 @@ export default function CardPrice(props) {
           <td className='mb-2'>{props.nombre}</td>
           <td className='mb-2 d-none d-md-table-cell'>{props.simbolo}</td>
           <td className='mb-2' >${props.precio}</td>
-          <td className='mb-2 ' id='cont'>{props.cambio}%</td>
+          <td className='mb-2 ' onChange={precio} id={props.id}>{props.cambio}%</td>
           <td className='mb-2 d-none d-md-table-cell'>${props.capitalizacion}</td>
-          <td><button className='btn-fav'><AiOutlineHeart className='icon-fav'/></button></td>
+          <td><button className='btn-fav' onClick={setFav} id={props.id}><AiOutlineHeart className='icon-fav'/></button></td>
         </tr>
       </tbody>
   </>

@@ -12,7 +12,6 @@ export default function Price() {
     localStorage.setItem('dataApi', JSON.stringify(resp.data))
   }
 
-  console.log(monedas)
 
   useEffect(()=>{
     obtenerMonedas()
@@ -35,7 +34,7 @@ export default function Price() {
           </tr>
         </thead>
       {
-        monedas.map(moneda=> <CardPrice key={moneda.id} ranking={moneda.market_cap_rank} img={moneda.image} nombre={moneda.name} simbolo={moneda.symbol} precio={moneda.current_price} cambio={moneda.price_change_percentage_24h} capitalizacion={moneda.market_cap}/>)
+        monedas.map(moneda=> <CardPrice key={moneda.id} ranking={moneda.market_cap_rank} img={moneda.image} nombre={moneda.name} simbolo={moneda.symbol} precio={moneda.current_price} cambio={moneda.price_change_percentage_24h} capitalizacion={moneda.market_cap} id={moneda.id}/>)
       }
       </table>
     </section>
