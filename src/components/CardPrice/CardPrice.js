@@ -21,7 +21,7 @@ export default function CardPrice(props) {
   //   precio()
   // })
 
-  // const setFav=(id)=>{
+  // const setFav=()=>{
   //   let data = JSON.parse(localStorage.getItem('dataApi'))
   //   let existingFavs= JSON.parse(localStorage.getItem('favoritos')) || []
   //   let fav = data.find(info => info.id === id)
@@ -38,8 +38,8 @@ export default function CardPrice(props) {
         <td className='mb-2'>{props.nombre}</td>
         <td className='mb-2 d-none d-md-block'>{props.simbolo}</td>
         <td className='mb-2' >${props.precio}</td>
-        <td className='mb-2 d-none d-md-block' id='cont'>{props.cambio}%</td>
-        <td className='mb-2'>${props.capitalizacion}</td>
+        <td className='mb-2 ' id='cont'>{props.cambio}%</td>
+        <td className='mb-2 d-none d-md-block'>${props.capitalizacion}</td>
         <td><button className='btn-fav'><AiOutlineHeart className='icon-fav'/></button></td>
       </tr>
   </>
