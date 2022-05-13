@@ -40,8 +40,9 @@ function Converor() {
     let precioUno = document.getElementById('moneda-precio').textContent
     let precioDos = document.getElementById('moneda-precio-dos').textContent
     let cantidad = document.getElementById('cantidad').value
+    const nombre = document.getElementById('moneda-nombre-dos').textContent
     let res = document.getElementById('resultado')
-    res.innerText = ((precioUno*cantidad)/precioDos).toFixed(5)
+    res.innerText = ((precioUno*cantidad)/precioDos).toFixed(5) + ' ' + nombre
   }
 
   return (
