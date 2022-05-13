@@ -1,0 +1,35 @@
+.contenedor{
+  width: 90%;
+  padding: 35px 15px ;
+  border-radius: 10px;
+  background-color: var(--Azul-oscuro);
+  color: var(--Blanco-letra);
+}
+.input-number{
+  border-radius: 5px;
+  border: none;
+}
+#cantidad{
+  background-color: var(--Azul-oscuro);
+  font-weight: bold;
+  color: var(--Blanco-letra);
+  font-size: 18px;
+}
+#cantidad::placeholder{
+  color: var(--Azul-claro);
+}
+#cantidad:focus-visible{
+  border: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+@media (max-width:577px){
+  .contenedor{
+    width: 100%;
+    padding: 15px 5px ;
+    border-radius: 0;
+  }
+}

@@ -1,15 +1,15 @@
-import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import CardPrice from '../CardPrice/CardPrice'
 import './price.css'
+
 export default function Price() {
   const [monedas, setMonedas] = useState([])
 
-  const obtenerMonedas = async()=>{
-    const resp = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false')
-    setMonedas(resp.data)
-    localStorage.setItem('dataApi', JSON.stringify(resp.data))
+  const obtenerMonedas =()=>{
+    let resp = JSON.parse(localStorage.getItem('dataApi'))
+    console.log(resp)
+    setMonedas(resp)
   }
 
 
