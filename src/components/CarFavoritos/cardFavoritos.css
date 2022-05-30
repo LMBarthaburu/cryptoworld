@@ -1,0 +1,10 @@
+.card{
+  padding: 25px 0;
+  background-color: var(--Negro-letra);
+  color: var(--Blanco-letra);
+  box-shadow: .5px .5px 5px var(--Negro-letra);
+  height: 360px;
+}
+.card-img-top-fav{
+  width: 30%;
+}

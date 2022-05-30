@@ -23,7 +23,7 @@ export default function Slider() {
   useEffect(()=>{
     slider1()
     slider2()
-  },[])
+  })
 
   return (
     <section className='slider py-5 mb-5'>
