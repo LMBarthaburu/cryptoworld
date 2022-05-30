@@ -1,21 +1,20 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
+import React from 'react'
+import { useState, useEffect } from 'react'
 import CardPrice from '../CardPrice/CardPrice'
 import './price.css'
+import axios from 'axios'
 
 export default function Price() {
   const [monedas, setMonedas] = useState([])
-
-  const obtenerMonedas =()=>{
-    let resp = JSON.parse(localStorage.getItem('dataApi'))
+  const obtenerMonedas = async()=>{
+    const resp = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+    localStorage.setItem('dataApi', JSON.stringify(resp.data))
     console.log(resp)
-    setMonedas(resp)
+    setMonedas(resp.data)
   }
-
-
   useEffect(()=>{
     obtenerMonedas()
-  }, [])
+  }, [])  
 
   return (
     <section className='container'>
@@ -34,7 +33,7 @@ export default function Price() {
           </tr>
         </thead>
       {
-        monedas.map(moneda=> <CardPrice key={moneda.id} ranking={moneda.market_cap_rank} img={moneda.image} nombre={moneda.name} simbolo={moneda.symbol} precio={moneda.current_price} cambio={moneda.price_change_percentage_24h} capitalizacion={moneda.market_cap} id={moneda.id}/>)
+        monedas.map(favorito=> <CardPrice key={favorito.id} ranking={favorito.market_cap_rank} img={favorito.image} nombre={favorito.name} simbolo={favorito.symbol} precio={favorito.current_price} cambio={favorito.price_change_percentage_24h} capitalizacion={favorito.market_cap} id={favorito.id}/>)
       }
       </table>
     </section>
