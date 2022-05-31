@@ -1,11 +1,9 @@
 .hero-info-txt-container{
   width: 24%;
   margin: 50px 3px;
-  background-color: var(--Azul-claro);
   padding: 45px 0;
   border-radius: 15px;
-  color: var(--Blanco-letra);
-  box-shadow: 1px 1px 1px 1px var(--Azul-oscuro);
+  color: var(--Negro-letra);
 }
 .hero-info-txt{
   font-size: 35px;
@@ -35,15 +33,15 @@
 @media (max-width: 576px){
   .hero-info-txt-container{
     width: 45%;
-    height: 100px;
+    height: auto;
     margin: 5px;
     padding: 15px 0;
   } 
   .hero-info-txt{
-    font-size: 18px;
+    font-size:24px;
   }
   .hero-info-subtxt{
-    font-size: 12px;
+    font-size: 18px;
     padding: 0 15px;
   }
 }

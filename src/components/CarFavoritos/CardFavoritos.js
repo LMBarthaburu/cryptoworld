@@ -5,7 +5,7 @@ function CardFavoritos(props) {
   return (
     <>
       <div className='col-6 col-md-4 col-lg-3' id={props.id}>
-        <div className="card d-flex justify-content-center align-items-center text-center mb-4">
+        <div className="card-fav text-center mb-4">
           <img src={props.img} className="card-img-top-fav" alt="criptomoneda logo"/>
           <div className="card-body">
             <h3><span>#{props.ranking} - </span>{props.nombre}</h3>

@@ -1,3 +1,6 @@
+.title{
+  font-size: 40px;
+}
 .descarga-img{
   width:40%;
 }
@@ -9,5 +12,8 @@
 @media (max-width: 576px){
   .descarga-img{
     width:60%;
+  }
+  .title{
+    font-size: 36px;
   }
 }

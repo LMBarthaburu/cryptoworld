@@ -1,10 +1,13 @@
-.card{
+.card-fav{
   padding: 25px 0;
-  background-color: var(--Negro-letra);
-  color: var(--Blanco-letra);
-  box-shadow: .5px .5px 5px var(--Negro-letra);
-  height: 360px;
+  color: var(--Negro-letra);
+  height: 350px;
 }
 .card-img-top-fav{
   width: 30%;
+}
+@media (max-width: 577px){
+  .card-fav{
+    height: 275px;
+  }
 }

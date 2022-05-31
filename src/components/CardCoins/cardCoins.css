@@ -1,9 +1,15 @@
 .card{
-  color: var(--Blnaco-letra);
+  color: var(--Negro-letra);
   background-color: transparent;
   border: none;
+  height: 200px;
 }
 .card-img-top{
-  width: 70px;
+  width: 50px;
   border-radius: 100%;
+}
+@media(max-width: 577px){
+  .card{
+    height: 150px;
+  }
 }
