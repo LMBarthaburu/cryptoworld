@@ -9,7 +9,7 @@ import {CgFileDocument} from 'react-icons/cg'
 function Ayuda() {
   return (
     <section className='container my-5 text-center text-md-start'>
-      <h2 className='mb-4'>¿Necesitas ayuda?</h2>
+      <h2 className='mb-4 fw-bold title'>¿Necesitas ayuda?</h2>
       <div className='row'>
         <div className='col-12 col-md-4 my-2'>
           <RiCustomerService2Fill className='icons'/>

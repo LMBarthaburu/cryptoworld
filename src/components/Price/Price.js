@@ -8,8 +8,6 @@ export default function Price() {
   const [monedas, setMonedas] = useState([])
   const obtenerMonedas = async()=>{
     const resp = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
-    localStorage.setItem('dataApi', JSON.stringify(resp.data))
-    console.log(resp)
     setMonedas(resp.data)
   }
   useEffect(()=>{
@@ -18,15 +16,14 @@ export default function Price() {
 
   return (
     <section className='container'>
-      <h2>Monedas más populares del mercado:</h2>
-      <h5> Top 20 según capitalización de mercado</h5>
+      <h2>Top 100 monedas más populares según capitalización de mercado:</h2>
       <table className='w-100 my-3'>
         <thead className='text-center'>
           <tr>
             <th className='fw-bold'></th>
             <th className='fw-bold'>Logo</th>
-            <th className='fw-bold'>Nombre</th>
-            <th className='fw-bold d-none d-md-block'>Simbolo</th>
+            <th className='fw-bold d-none d-md-block'>Nombre</th>
+            <th className='fw-bold '>Sigla</th>
             <th className='fw-bold'>Precio</th>
             <th className='fw-bold '>24h%</th>
             <th className='fw-bold d-none d-md-block'>Cap. de Mercado</th>

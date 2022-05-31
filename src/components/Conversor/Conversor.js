@@ -1,17 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import Listado from '../Listado/Listado'
 import './conversor.css'
+import axios from 'axios'
 
 function Converor() {
   const [crypto1, selectCrypto1] = useState([])
 
-  const getData =()=>{
-    let data = JSON.parse(localStorage.getItem('dataApi'))
-    selectCrypto1(data)
+  const obtenerMonedas = async()=>{
+    const resp = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+    selectCrypto1(resp.data)
   }
   useEffect(()=>{
-    getData()
-  },[])
+    obtenerMonedas()
+  }, [])
 
   const setValor =()=>{
     const valor = document.getElementById('value').value
@@ -61,7 +62,7 @@ function Converor() {
             <h5 className='m-0 mx-3 d-none d-md-block w-25 text-center' id='moneda-nombre'>Criptomoneda</h5>
             <h5 className='m-0 mx-3 w-25 text-center'>$<span id='moneda-precio'>Precio</span></h5>
             <h5 className='m-0 mx-3 d-none d-md-block w-25 text-center' id='moneda-variacion'>Variación % 24hrs</h5>
-            <input type="number" className='w-50 ps-md-3 py-2 input-number text-center text-md-start' id='cantidad' onChange={calculo} placeholder='Cantidad' />
+            <input type="number" className='w-50 ps-md-3 py-2 input-number text-center text-md-start' id='cantidad' onChange={calculo} placeholder='Monto' />
           </div>
           <div className='my-2 d-flex justify-content-between justify-content-md-center align-items-center'>
             <select className="form-select w-25" onClick={setValor2} id='value2'>
