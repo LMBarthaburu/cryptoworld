@@ -21,3 +21,12 @@ td{
   color: red;
   font-size: 20px;
 }
+.link-detail{
+  text-decoration: none;
+  margin: 0;
+  color: var(--negro-letra);
+}
+.link-detail:hover{
+  color: var(--Azul-oscuro);
+  font-weight: bold;
+}

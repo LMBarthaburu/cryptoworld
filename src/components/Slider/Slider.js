@@ -29,7 +29,7 @@ export default function Slider() {
         </div>
               <div className='row'>
                 {
-                sliderUno.map(card => <CardCoins key={card.id} ranking={card.market_cap_rank} img={card.image} nombre={card.name} simbolo={card.symbol} precio={card.current_price} capitalizacion={card.market_cap}/>)
+                sliderUno.map(card => <CardCoins key={card.id} ranking={card.market_cap_rank} img={card.image} nombre={card.name} simbolo={card.symbol} precio={card.current_price} capitalizacion={card.market_cap} id={card.id}/>)
                 }
               </div>
       </div>

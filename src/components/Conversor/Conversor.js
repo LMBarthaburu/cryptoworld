@@ -19,22 +19,28 @@ function Converor() {
     const nombre = document.getElementById('moneda-nombre')
     const precio = document.getElementById('moneda-precio')
     const variacion = document.getElementById('moneda-variacion')
-    let data = JSON.parse(localStorage.getItem('dataApi'))
-    const found = data.find(datas=> datas.id ===valor)
+    const found = crypto1.find(datas=> datas.id ===valor)
     nombre.innerHTML= found.id
     precio.innerText=found.current_price
     variacion.innerHTML= found.price_change_percentage_24h+ '%'
+    let cantidad = document.getElementById('cantidad')
+    cantidad.value= ' '
+    let result = document.getElementById('resultado')
+    result.innerText= 'Cantidad a recibir '
   }
   const setValor2 =()=>{
     const valor = document.getElementById('value2').value
     const nombre = document.getElementById('moneda-nombre-dos')
     const precio = document.getElementById('moneda-precio-dos')
     const variacion = document.getElementById('moneda-variacion-dos')
-    let data = JSON.parse(localStorage.getItem('dataApi'))
-    const found = data.find(datas=> datas.id ===valor)
+    const found = crypto1.find(datas=> datas.id ===valor)
     nombre.innerHTML= found.id
     precio.innerText= found.current_price
     variacion.innerHTML= found.price_change_percentage_24h + '%'
+    let cantidad = document.getElementById('cantidad')
+    cantidad.value= ' '
+    let result = document.getElementById('resultado')
+    result.innerText= 'Cantidad a recibir '
   }
 
   const calculo =()=>{
@@ -47,9 +53,9 @@ function Converor() {
   }
 
   return (
-    <section className='container my-3 my-lg-5'>
+    <section className='container mt-1 mb-3 mt-lg-4 mb-lg-5'>
       <div className='row justify-content-center align-items-center '>
-        <div className='contenedor text-center text-md-start'>
+        <div className='contenedor text-center text-md-start px-lg-5'>
           <h2 >Conversor de Monedas</h2>
           <h6 className='mb-4'>1- Elija las monedas que quiere comparar.<br/> 2- ingrese la cantidad a convertir.</h6>
           <div className='my-2 d-flex justify-content-between justify-content-md-center align-items-center'>

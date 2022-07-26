@@ -4,6 +4,8 @@ import CardPrice from '../CardPrice/CardPrice'
 import './price.css'
 import axios from 'axios'
 
+
+
 export default function Price() {
   const [monedas, setMonedas] = useState([])
   const obtenerMonedas = async()=>{
@@ -12,8 +14,8 @@ export default function Price() {
   }
   useEffect(()=>{
     obtenerMonedas()
-  }, [])  
-
+  }, []) 
+  
   return (
     <section className='container'>
       <h2>Top 100 monedas más populares según capitalización de mercado:</h2>
@@ -29,9 +31,11 @@ export default function Price() {
             <th className='fw-bold d-none d-md-block'>Cap. de Mercado</th>
           </tr>
         </thead>
-      {
-        monedas.map(favorito=> <CardPrice key={favorito.id} ranking={favorito.market_cap_rank} img={favorito.image} nombre={favorito.name} simbolo={favorito.symbol} precio={favorito.current_price} cambio={favorito.price_change_percentage_24h} capitalizacion={favorito.market_cap} id={favorito.id}/>)
-      }
+        <tbody className='text-center'>
+          {
+            monedas.map(favorito=> <CardPrice key={favorito.id} ranking={favorito.market_cap_rank} img={favorito.image} nombre={favorito.name} simbolo={favorito.symbol} precio={favorito.current_price} cambio={favorito.price_change_percentage_24h} capitalizacion={favorito.market_cap} id={favorito.id}/>)
+          }
+      </tbody>
       </table>
     </section>
   )
