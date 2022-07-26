@@ -3,15 +3,20 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import CardFavoritos from '../../components/CarFavoritos/CardFavoritos'
 import './favoritos.css'
+import axios from 'axios'
+
 
 
 function Favoritos() {
 
   const [favoritos, setFavoritos] = useState([])
 
-  const getData=()=>{
+  const getData= async()=>{
     const data = JSON.parse(localStorage.getItem('favoritos'))
-    setFavoritos(data)
+    const resp = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+    const monedas = resp.data
+    const favoritosActualizados = monedas.filter((elem) => data.find(({ id }) => elem.id === id));
+    setFavoritos(favoritosActualizados)
   }
   useEffect(()=>{
     getData()

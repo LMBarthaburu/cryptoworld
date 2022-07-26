@@ -14,12 +14,14 @@
   font-weight: bold;
   color: var(--Blanco-letra);
   font-size: 18px;
+  border: 2px solid var(--Azul-claro);
 }
 #cantidad::placeholder{
   color: var(--Azul-claro);
 }
 #cantidad:focus-visible{
-  border: none;
+  border: 2px solid var(--Azul-claro);
+  outline: none;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
