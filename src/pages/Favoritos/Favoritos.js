@@ -8,6 +8,9 @@ import axios from 'axios'
 
 
 function Favoritos() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const [favoritos, setFavoritos] = useState([])
 

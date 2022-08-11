@@ -8,6 +8,10 @@ import Navbar from '../../components/Navbar/Navbar'
 import './detail.css'
 
 function Detail() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   const [detalle, setDetalle] = useState([])
   const getDetail = async()=>{
     const storage = localStorage.getItem('detalles')
