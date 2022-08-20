@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 // import Button from '../Button/Button'
 import './navbar.css'
 import {RiStockFill} from 'react-icons/ri'
@@ -16,10 +16,10 @@ export default function Navbar() {
           <div className="collapse navbar-collapse justify-content-end me-lg-4" id="navbarNavDropdown">
             <ul className="navbar-nav text-center">
               <li className="nav-item">
-                <Link className="nav-link" to="/coins">Cotizaciones</Link>
+                <NavLink className="nav-link" to="/coins">Cotizaciones</NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/favoritos">Favoritos</Link>
+                <NavLink className="nav-link" to="/favoritos">Favoritos</NavLink>
               </li>
               {/* <li className="nav-item d-lg-none">
                 <Link className="nav-link" to="/logIn">Iniciar Sesion</Link>
